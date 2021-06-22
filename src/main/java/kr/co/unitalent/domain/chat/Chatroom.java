@@ -1,6 +1,7 @@
 package kr.co.unitalent.domain.chat;
 
 import kr.co.unitalent.domain.BaseTimeEntity;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
@@ -43,6 +44,14 @@ public class Chatroom extends BaseTimeEntity {
     private LocalDateTime buyerLastMessageDate;
 
     private String lastMessage;
+
+    @Builder
+    public Chatroom(String type, Long boardNumber, String seller, String buyer) {
+        this.type = type;
+        this.boardNumber = boardNumber;
+        this.seller = seller;
+        this.buyer = buyer;
+    }
 
     @PrePersist
     public void prePersist() {

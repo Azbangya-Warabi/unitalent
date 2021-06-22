@@ -1,10 +1,10 @@
 package kr.co.unitalent.web.controller;
 
 import kr.co.unitalent.service.posts.TalentSellService;
-import kr.co.unitalent.web.dto.TalentSellMypageResponseDto;
-import kr.co.unitalent.web.dto.TalentSellResponseDto;
-import kr.co.unitalent.web.dto.TalentSellSaveRequestDto;
-import kr.co.unitalent.web.dto.TalentSellUpdateDto;
+import kr.co.unitalent.web.dto.posts.TalentSellMypageResponseDto;
+import kr.co.unitalent.web.dto.posts.TalentSellResponseDto;
+import kr.co.unitalent.web.dto.posts.TalentSellSaveRequestDto;
+import kr.co.unitalent.web.dto.posts.TalentSellUpdateDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

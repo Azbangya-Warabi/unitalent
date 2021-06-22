@@ -1,16 +1,14 @@
 package kr.co.unitalent.service.posts;
 
 import kr.co.unitalent.domain.posts.TalentSell;
-import kr.co.unitalent.domain.posts.TalentSellModifiedHistory;
 import kr.co.unitalent.domain.posts.TalentSellModifiedHistoryRepository;
 import kr.co.unitalent.domain.posts.TalentSellRepository;
-import kr.co.unitalent.web.dto.*;
+import kr.co.unitalent.web.dto.posts.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 

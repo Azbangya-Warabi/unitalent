@@ -1,9 +1,8 @@
-package kr.co.unitalent.web.dto;
+package kr.co.unitalent.web.dto.posts;
 
 import kr.co.unitalent.domain.posts.TalentSell;
 import lombok.*;
 
-import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 

@@ -40,15 +40,7 @@ public class User extends BaseTimeEntity {
     @Column(nullable = false)
     private Role role;
 
-    private String universeName;
-
-    private String universeImage;
-
-    private String major;
-
-    private String registrationDate;
-
-    private String registrationGrade;
+    private String universeDataNumber;
 
     @Column(length = 200)
     private String selfIntroduction;

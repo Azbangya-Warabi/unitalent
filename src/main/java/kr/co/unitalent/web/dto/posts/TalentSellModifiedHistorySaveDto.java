@@ -1,12 +1,14 @@
-package kr.co.unitalent.web.dto;
+package kr.co.unitalent.web.dto.posts;
 
 import kr.co.unitalent.domain.posts.TalentSell;
 import kr.co.unitalent.domain.posts.TalentSellModifiedHistory;
-import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.validation.constraints.Size;
-
+@Getter
+@ToString
+@NoArgsConstructor
 public class TalentSellModifiedHistorySaveDto {
 
     private Long boardNumber;

@@ -1,6 +1,7 @@
 package kr.co.unitalent.domain.chat;
 
 import kr.co.unitalent.domain.BaseTimeEntity;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
@@ -20,10 +21,7 @@ public class Chat extends BaseTimeEntity {
     private Long roomNumber;
 
     @Column(nullable = false)
-    private String request_user;
-
-    @Column(nullable = false)
-    private String response_user;
+    private String requestUser;
 
     @Column(length = 300)
     private String message;
@@ -32,11 +30,23 @@ public class Chat extends BaseTimeEntity {
 
     @Column(nullable = false)
     @ColumnDefault("false")
-    private Boolean uncheking;
+    private Boolean checked;
+
+    @Builder
+    public Chat (Long roomNumber, String requestUser, String message, String image) {
+        this.roomNumber = roomNumber;
+        this.requestUser = requestUser;
+        this.message = message;
+        this.image = image;
+    }
+
+    public void changeCheckedToTrue(boolean checked) {
+        this.checked = checked;
+    }
 
     @PrePersist
     public void prePersist() {
-        this.uncheking = this.uncheking == null ? false : this.uncheking;
+        this.checked = this.checked == null ? false : this.checked;
     }
 
 }

@@ -1,15 +1,12 @@
-package kr.co.unitalent.web.dto;
+package kr.co.unitalent.web.dto.posts;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 
-import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 
 @Getter
+@ToString
 @NoArgsConstructor
 public class TalentSellUpdateDto {
     @Size(min = 1, max = 30)

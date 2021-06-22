@@ -1,9 +1,13 @@
-package kr.co.unitalent.web.dto;
+package kr.co.unitalent.web.dto.posts;
 
 import kr.co.unitalent.domain.posts.TalentSell;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Getter
+@ToString
+@NoArgsConstructor
 public class TalentSellMypageResponseDto {
     private Long boardNumber;
     private String title;

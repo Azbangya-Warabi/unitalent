@@ -1,6 +1,6 @@
 package kr.co.unitalent.web.controller;
 
-import kr.co.unitalent.service.posts.AdminService;
+import kr.co.unitalent.service.AdminService;
 import kr.co.unitalent.web.dto.admin.TalentSellModifiedHistoryResponseDto;
 import kr.co.unitalent.web.dto.admin.TalentSellStatusResponseDto;
 import kr.co.unitalent.web.dto.admin.TalentSellStatusUpdateDto;

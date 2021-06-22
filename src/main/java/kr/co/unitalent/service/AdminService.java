@@ -1,4 +1,4 @@
-package kr.co.unitalent.service.posts;
+package kr.co.unitalent.service;
 
 import kr.co.unitalent.domain.posts.TalentSell;
 import kr.co.unitalent.domain.posts.TalentSellModifiedHistoryRepository;
@@ -9,7 +9,7 @@ import kr.co.unitalent.web.dto.admin.TalentSellStatusUpdateDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 

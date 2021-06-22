@@ -1,14 +1,13 @@
-package kr.co.unitalent.web.dto;
+package kr.co.unitalent.web.dto.posts;
 
 import kr.co.unitalent.domain.posts.TalentSell;
 import lombok.Getter;
-import lombok.NonNull;
-
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.Size;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Getter
+@ToString
+@NoArgsConstructor
 public class TalentSellResponseDto {
     private Long boardNumber;
     private String nickname;
