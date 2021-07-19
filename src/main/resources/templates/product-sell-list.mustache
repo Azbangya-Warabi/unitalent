@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <title>Unit</title>
+</head>
+
+<body>
+{{>layout/header}}
+<main>
+    <article>
+        <div class="sell-list-container">
+            <div class="global-search-container">
+                <div class="left-side">카테고리</div>
+                <div class="right-side">
+                    <div>전체</div>
+                    <div id="search-choice">디자인</div>
+                    <div>IT프로그래밍</div>
+                    <div>통역 번역</div>
+                    <div>마케팅</div>
+                    <div>영상/편집</div>
+                    <div>레슨</div>
+                    <div>스포츠</div>
+                    <div>문서작업</div>
+                </div>
+                <div class="left-side">활동지역</div>
+                <div class="right-side">
+                    <select name="" id="">
+                        <option hidden>광역시·도</option>
+                        <option>서울</option>
+                    </select>
+                    <select name="" id="">
+                        <option hidden>시·군·자치구</option>
+                        <option>영등포구</option>
+                    </select>
+                    <input type="button" value="적용하기">
+                </div>
+            </div>
+            <div class="page-category">
+                <h1>
+                    <img class="home-circle" src="/image/home-circle/타원 1.png" alt="">
+                    재능 판매
+                </h1>
+                <div class="amount">{{talent-sell-count}}개의 게시물</div>
+            </div>
+            <div id="view-option">
+                <div id="option-choice">최신순</div>
+                <div>가격 높은 순</div>
+                <div>가격 낮은 순</div>
+                <div>평점 높은 순</div>
+            </div>
+            <article>
+                <div class="sell-list-container" id="sell-list-container">
+                </div>
+            </article>
+        </div>
+    </article>
+</main>
+{{>layout/footer}}

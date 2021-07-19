@@ -1,9 +1,9 @@
 package kr.co.unitalent.web.controller;
 
 import kr.co.unitalent.service.AdminService;
-import kr.co.unitalent.web.dto.admin.TalentSellModifiedHistoryResponseDto;
-import kr.co.unitalent.web.dto.admin.TalentSellStatusResponseDto;
-import kr.co.unitalent.web.dto.admin.TalentSellStatusUpdateDto;
+import kr.co.unitalent.web.dto.admin.TalentProductModifiedHistoryResponseDto;
+import kr.co.unitalent.web.dto.admin.TalentProductStatusResponseDto;
+import kr.co.unitalent.web.dto.admin.TalentProductStatusUpdateDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,18 +19,18 @@ public class AdminApiController {
 
     private final AdminService adminService;
 
-    @GetMapping("/talent-sell/nonapprove-status")
-    public ResponseEntity<List<TalentSellStatusResponseDto>> findAllNonApprovalStatus() {
+    @GetMapping("/product/nonapprove-status")
+    public ResponseEntity<List<TalentProductStatusResponseDto>> findAllNonApprovalStatus() {
         return new ResponseEntity<>(adminService.findAllNonApprovalStatus(), HttpStatus.OK);
     }
 
-    @GetMapping("/talent-sell/modified-history/{boardNumber}")
-    public ResponseEntity<List<TalentSellModifiedHistoryResponseDto>> findAllNonApprovalStatusHistory(@PathVariable Long boardNumber) {
+    @GetMapping("/product/modified-history/{boardNumber}")
+    public ResponseEntity<List<TalentProductModifiedHistoryResponseDto>> findAllNonApprovalStatusHistory(@PathVariable Long boardNumber) {
         return new ResponseEntity<>(adminService.findAllModifiedHistory(boardNumber), HttpStatus.OK);
     }
 
-    @PostMapping("/talent-sell/{boardNumber}/status")
-    public Long talentSellStatusUpdate(@PathVariable Long boardNumber, @RequestBody @Valid TalentSellStatusUpdateDto talentSellStatusUpdateDto) {
-        return adminService.changeTalentSellStatus(boardNumber, talentSellStatusUpdateDto);
+    @PostMapping("/product/{boardNumber}/status")
+    public Long talentProductUpdate(@PathVariable Long boardNumber, @RequestBody @Valid TalentProductStatusUpdateDto talentProductStatusUpdateDto) {
+        return adminService.changeProductStatus(boardNumber, talentProductStatusUpdateDto);
     }
 }

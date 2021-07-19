@@ -1,13 +1,12 @@
 package kr.co.unitalent.domain.user.carrer;
 
+import kr.co.unitalent.domain.user.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.ColumnDefault;
 import org.springframework.data.annotation.LastModifiedDate;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Getter
@@ -17,17 +16,22 @@ public class UserUniverseData {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long universeDataNumber;
+    private Long id;
 
-    private String universeName;
-
-    private String universeImage;
+    private String name;
 
     private String major;
+
+    @ColumnDefault("false")
+    private boolean certification;
 
     private String certificationData;
 
     private LocalDateTime registrationDate;
 
     private LocalDateTime certificationDate;
+
+    @OneToOne(mappedBy = "userUniverseData")
+    private User user;
+
 }

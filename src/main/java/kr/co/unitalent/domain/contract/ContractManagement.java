@@ -15,13 +15,13 @@ public class ContractManagement extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long contractNumber;
+    private Long id;
 
     @Column(nullable = false)
-    private String sellerNickname;
+    private String seller;
 
     @Column(nullable = false)
-    private String buyerNickname;
+    private String buyer;
 
     @Column(nullable = false)
     private String type;
@@ -39,9 +39,9 @@ public class ContractManagement extends BaseTimeEntity {
 
     private LocalDateTime contractConcludeDate;
 
-    private LocalDateTime contractCancleDate;
+    private LocalDateTime contractCancelDate;
 
-    private LocalDateTime contarctCompleteDate;
+    private LocalDateTime contractCompleteDate;
 
     private int star;
 

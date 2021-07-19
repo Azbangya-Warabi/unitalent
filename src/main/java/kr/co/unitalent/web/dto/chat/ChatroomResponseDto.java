@@ -14,27 +14,23 @@ import java.time.LocalDateTime;
 @ToString
 @NoArgsConstructor
 public class ChatroomResponseDto {
-    private Long roomNumber;
+    private Long chatroomId;
     private String type;
-    private Long boardNumber;
     private String seller;
     private String buyer;
     private Long sellerUncheckedMessageCount;
-    private LocalDateTime sellerLastMessageDate;
     private Long buyerUncheckedMessageCount;
-    private LocalDateTime buyerLastMessageDate;
     private String lastMessage;
+    private LocalDateTime lastMessageDate;
 
     public ChatroomResponseDto(Chatroom entity) {
-        this.roomNumber = entity.getRoomNumber();
-        this.type = entity.getType();
-        this.boardNumber = entity.getBoardNumber();
-        this.seller = entity.getSeller();
-        this.buyer = entity.getBuyer();
+        this.chatroomId = entity.getId();
+        this.type = entity.getTalentProduct().getType();
+        this.seller = entity.getSeller().getNickname();
+        this.buyer = entity.getBuyer().getNickname();
         this.sellerUncheckedMessageCount = entity.getSellerUncheckedMessageCount();
-        this.sellerLastMessageDate = entity.getSellerLastMessageDate();
         this.buyerUncheckedMessageCount = entity.getBuyerUncheckedMessageCount();
-        this.buyerLastMessageDate = entity.getBuyerLastMessageDate();
         this.lastMessage = entity.getLastMessage();
+        this.lastMessageDate = entity.getModifiedDate();
     }
 }

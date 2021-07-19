@@ -12,7 +12,7 @@ import javax.persistence.Id;
 public class ContractStatus {
 
     @Id
-    private String statusCode;
+    private String id;
 
     private String status;
 

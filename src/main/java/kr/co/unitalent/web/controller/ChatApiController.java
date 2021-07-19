@@ -1,11 +1,7 @@
 package kr.co.unitalent.web.controller;
 
-import kr.co.unitalent.service.chat.ChatService;
-import kr.co.unitalent.web.dto.chat.ChatResponseDto;
-import kr.co.unitalent.web.dto.chat.ChatSaveRequestDto;
-import kr.co.unitalent.web.dto.chat.ChatroomResponseDto;
-import kr.co.unitalent.web.dto.chat.ChatroomSaveRequestDto;
-import kr.co.unitalent.web.dto.posts.TalentSellResponseDto;
+import kr.co.unitalent.service.ChatService;
+import kr.co.unitalent.web.dto.chat.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,9 +19,14 @@ public class ChatApiController {
 
     // chatroom
 
-    @GetMapping("/chatroom/{nickname}/list")
-    public ResponseEntity<List<ChatroomResponseDto>> findAllChatroom(@PathVariable String nickname) {
-        return new ResponseEntity<>(chatService.getAllChatroom(nickname), HttpStatus.OK);
+    @GetMapping("/chatroom/{userId}/list")
+    public ResponseEntity<List<ChatroomResponseDto>> findAllChatroom(@PathVariable Long userId) {
+        return new ResponseEntity<>(chatService.findAllChatroom(userId), HttpStatus.OK);
+    }
+
+    @GetMapping("/chatroom/{chatroomId}/talent-product/{sellerId}")
+    public ResponseEntity<ChatroomTalentProductResponseDto> findTalentProductOfChatroom(@PathVariable Long chatroomId, @PathVariable Long sellerId) {
+        return new ResponseEntity<>(chatService.findTalentProductOfChatroom(chatroomId, sellerId), HttpStatus.OK);
     }
 
     @PostMapping("/chatroom")
@@ -34,14 +35,14 @@ public class ChatApiController {
     }
 
     // chat
-    @GetMapping("/chatroom/{roomNumber}/chat/message")
-    public ResponseEntity<List<ChatResponseDto>> findByRoomNumber(@PathVariable Long roomNumber) {
-        return new ResponseEntity<>(chatService.findByRoomNum(roomNumber), HttpStatus.OK);
+    @GetMapping("/chatroom/{chatroomId}/chat/message")
+    public ResponseEntity<List<ChatResponseDto>> findByRoomNumber(@PathVariable Long chatroomId) {
+        return new ResponseEntity<>(chatService.findByRoomNum(chatroomId), HttpStatus.OK);
     }
 
-    @PostMapping("/chatroom/{roomNumber}/chat/{nickname}/checked")
-    public Long changeCheckedToTrue(@PathVariable Long roomNumber, @PathVariable String nickname) {
-        return chatService.changeCheckedToTrue(roomNumber, nickname);
+    @PostMapping("/chatroom/{chatroomId}/chat/{userId}/checked")
+    public Long changeCheckedToTrue(@PathVariable Long chatroomId, @PathVariable Long userId) {
+        return chatService.changeCheckedToTrue(chatroomId, userId);
     }
 
     @PostMapping("/chat")

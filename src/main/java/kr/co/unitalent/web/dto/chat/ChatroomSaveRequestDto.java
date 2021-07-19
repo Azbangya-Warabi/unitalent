@@ -1,5 +1,7 @@
 package kr.co.unitalent.web.dto.chat;
 import kr.co.unitalent.domain.chat.Chatroom;
+import kr.co.unitalent.domain.posts.TalentProduct;
+import kr.co.unitalent.domain.user.User;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -8,32 +10,28 @@ import java.time.LocalDateTime;
 @ToString
 @NoArgsConstructor
 public class ChatroomSaveRequestDto {
-    @NonNull
-    private String type;
 
     @NonNull
-    private Long boardNumber;
+    private Long talentProductId;
 
     @NonNull
-    private String seller;
+    private Long sellerId;
 
     @NonNull
-    private String buyer;
+    private Long buyerId;
 
     @Builder
-    public ChatroomSaveRequestDto(String type, Long boardNumber, String seller, String buyer) {
-        this.type = type;
-        this.boardNumber = boardNumber;
-        this.seller = seller;
-        this.buyer = buyer;
+    public ChatroomSaveRequestDto(Long talentProductId, Long sellerId, Long buyerId) {
+        this.talentProductId = talentProductId;
+        this.sellerId = sellerId;
+        this.buyerId = buyerId;
     }
 
     public Chatroom toEntity() {
         return Chatroom.builder()
-                .type(type)
-                .boardNumber(boardNumber)
-                .seller(seller)
-                .buyer(buyer)
+                .talentProduct(TalentProduct.builder().id(talentProductId).build())
+                .seller(User.builder().id(sellerId).build())
+                .buyer(User.builder().id(buyerId).build())
                 .build();
     }
 }

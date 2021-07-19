@@ -1,0 +1,1861 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  word-break: break-all;
+}
+
+.global-header-container {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: center;
+  height: 70px;
+}
+.global-header-container .global-left-side {
+  position: relative;
+  width: 40%;
+}
+.global-header-container .global-left-side #logo {
+  display: block;
+  float: left;
+  margin: 5px 50px 0 0;
+  border: none;
+}
+.global-header-container .global-left-side #logo:hover {
+  cursor: pointer;
+}
+.global-header-container .global-left-side input {
+  display: block;
+  width: 280px;
+  height: 40px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  padding: 0 0 0 9px;
+}
+.global-header-container .global-left-side #search {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  position: absolute;
+  right: 54px;
+  top: 1px;
+}
+.global-header-container .global-left-side #search:hover {
+  cursor: pointer;
+}
+.global-header-container .global-right-side {
+  width: 60%;
+}
+.global-header-container .global-right-side input {
+  display: block;
+  float: right;
+  margin-left: 20px;
+  width: 120px;
+  height: 40px;
+  background-color: #227aff;
+  border-radius: 5px;
+  padding: 9px 12px 11px;
+  color: #ffffff;
+  border: none;
+}
+.global-header-container .global-right-side input:hover {
+  cursor: pointer;
+}
+.global-header-container .global-right-side nav a {
+  float: right;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  color: #3c3c3c;
+  line-height: 1.2;
+  letter-spacing: normal;
+  margin: 0px 20px;
+  padding: 10px 5px;
+  text-decoration: none;
+}
+.global-header-container .global-right-side nav a:hover {
+  background-color: #dcdcdc;
+}
+
+footer {
+  background-color: #363b42;
+  height: 240px;
+}
+footer .global-footer-container:nth-child(1) {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #363b42;
+  justify-content: left;
+  align-content: stretch;
+  align-items: stretch;
+  color: #ffffff;
+}
+footer .global-footer-container:nth-child(1) div {
+  font-weight: bold;
+  font-size: 15px;
+  margin: 36px 0 53px 0;
+}
+footer .global-footer-container:nth-child(1) div:nth-child(2) {
+  margin: 36px 30px 53px 30px;
+}
+footer .global-footer-container:nth-child(1) div:hover {
+  cursor: pointer;
+}
+footer .global-footer-container:nth-child(2) {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #363b42;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: flex-end;
+  color: #ffffff;
+}
+footer .global-footer-container:nth-child(2) div {
+  font-size: 11px;
+}
+
+.container-underline {
+  width: 100%;
+  border-bottom: 1px solid #dddddd;
+  margin: 20px 0 35px 0;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+}
+
+.global-search-container {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: center;
+  margin-top: 50px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+}
+.global-search-container .left-side {
+  width: 10%;
+  margin: 19px 0 19px 18px;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #227aff;
+}
+.global-search-container .right-side {
+  width: 88%;
+}
+.global-search-container .right-side div {
+  display: inline-block;
+  margin-right: 30px;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #696969;
+}
+.global-search-container .right-side div:hover {
+  cursor: pointer;
+  font-weight: bold;
+  color: #000000;
+}
+.global-search-container .right-side #search-choice {
+  font-weight: bold;
+  color: #000000;
+}
+.global-search-container .right-side select {
+  width: 120px;
+  height: 34px;
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+  padding: 0 10px;
+}
+.global-search-container .right-side input {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #227aff;
+  border: none;
+  float: right;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+.global-search-container .right-side input:hover {
+  cursor: pointer;
+}
+
+.home-content-container {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+.home-content-container .banner {
+  width: 1200px;
+  height: 480px;
+  margin: auto;
+  border-radius: 20px;
+  background-color: #227aff;
+}
+.home-content-container .banner:hover {
+  cursor: pointer;
+}
+.home-content-container article h1 {
+  float: left;
+  margin-top: 55px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.home-content-container article h1 .home-circle {
+  padding: 0 5px 8px 0;
+}
+.home-content-container article h1:hover {
+  cursor: pointer;
+}
+.home-content-container .home-content {
+  width: 280px;
+  height: 312px;
+  margin-bottom: 27px;
+  text-decoration: none;
+}
+.home-content-container .home-content:hover {
+  cursor: pointer;
+}
+.home-content-container .home-content:hover img {
+  transform: scale(1.3);
+}
+.home-content-container .home-content:link {
+  color: unset;
+}
+.home-content-container .home-content:visited {
+  color: unset;
+}
+.home-content-container .home-content .img-wrapper {
+  display: inline-block;
+  height: 240px;
+  overflow: hidden;
+  margin: 0 0 8px 0;
+  border-radius: 5px;
+}
+.home-content-container .home-content .img-wrapper img {
+  width: 280px;
+  height: 240px;
+  transition: 0.5s;
+  padding: 0;
+  margin: 0;
+}
+.home-content-container .home-content .home-content-title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 280px;
+  height: 24px;
+  margin: 0 0 7px;
+}
+.home-content-container .home-content .home-content-star {
+  float: left;
+}
+.home-content-container .home-content .home-content-review {
+  margin-left: 5px;
+  float: left;
+}
+.home-content-container .home-content .home-content-price {
+  float: right;
+  font-weight: bold;
+}
+.home-content-container .home-middle-banner {
+  width: 1200px;
+  height: 170px;
+  background-color: #8EFB7C;
+  margin: 20px 0;
+}
+.home-content-container .home-middle-banner:hover {
+  cursor: pointer;
+}
+
+.sell-post-container {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+.sell-post-container .sell-post-category-container {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: flex-end;
+}
+.sell-post-container .sell-post-category-container h1 {
+  font-size: 24px;
+  margin: 50px 0 0;
+  padding: 0;
+}
+.sell-post-container .sell-post-category-container div {
+  font-weight: bold;
+  font-size: 14px;
+  color: #a7a7a7;
+}
+.sell-post-container .sell-post-category-container div span {
+  color: #3c3c3c;
+}
+.sell-post-container h2 {
+  width: 15%;
+  font-size: 16px;
+}
+.sell-post-container #title {
+  width: 85%;
+  box-sizing: border-box;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+  padding: 0 19px;
+}
+.sell-post-container .tip {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+.sell-post-container .tip .left {
+  width: 15%;
+}
+.sell-post-container .tip .right {
+  width: 85%;
+  color: #c8c8c8;
+  font-size: 14px;
+  padding: 5px 0 10px 0;
+}
+.sell-post-container select {
+  width: 85%;
+  height: 40px;
+  border-radius: 5px;
+  padding: 0 19px;
+  border: 1px solid #dcdcdc;
+  margin: 10px 0;
+}
+.sell-post-container textarea {
+  width: 85%;
+  box-sizing: border-box;
+  padding: 15px 19px;
+  height: 450px;
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+  resize: none;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+.sell-post-container .sell-post-file-container {
+  width: 85%;
+  margin: 10px 0;
+}
+.sell-post-container .sell-post-file-container #main-image {
+  width: 500px;
+  height: 450px;
+  border: 1px solid;
+  float: left;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+  position: relative;
+}
+.sell-post-container .sell-post-file-container #main-image .fa-plus-circle {
+  font-size: 95px;
+  margin: auto;
+  padding: 177px 0;
+  color: #eaeaea;
+  text-align: center;
+  display: block;
+  opacity: 0.8;
+  transition: 0.7s;
+}
+.sell-post-container .sell-post-file-container #main-image .fa-plus-circle:hover {
+  color: #3c3c3c;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.sell-post-container .sell-post-file-container .sub-image {
+  float: right;
+  width: 240px;
+  height: 215px;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0 0 20px 20px;
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+  position: relative;
+}
+.sell-post-container .sell-post-file-container .sub-image .fa-plus-circle {
+  font-size: 95px;
+  margin: auto;
+  padding: 59px 0;
+  color: #eaeaea;
+  text-align: center;
+  display: block;
+  opacity: 0.8;
+  transition: 0.7s;
+}
+.sell-post-container .sell-post-file-container .sub-image .fa-plus-circle:hover {
+  color: #3c3c3c;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.sell-post-container #price {
+  width: 85%;
+  box-sizing: border-box;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+  padding: 0 19px;
+}
+.sell-post-container #notice {
+  width: 100%;
+  margin: 100px auto 0 auto;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #606060;
+}
+.sell-post-container #submit {
+  width: 120px;
+  height: 40px;
+  background-color: #227aff;
+  border-radius: 5px;
+  margin: 60px auto 100px auto;
+  border: none;
+  font-family: NotoSansCJKkr;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+.sell-post-container #submit:hover {
+  cursor: pointer;
+}
+
+.sell-list-container {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: flex-end;
+}
+.sell-list-container .page-category {
+  width: 30%;
+}
+.sell-list-container .page-category h1 {
+  margin-top: 55px;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+}
+.sell-list-container .page-category h1 .home-circle {
+  padding: 0 0 8px 0;
+}
+.sell-list-container .page-category .amount {
+  display: inline-block;
+  font-family: NotoSansCJKkr;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #969696;
+}
+.sell-list-container #view-option {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: flex-end;
+  align-content: stretch;
+  align-items: stretch;
+  width: 70%;
+  margin-top: 55px;
+}
+.sell-list-container #view-option div {
+  margin: 0 0 0 30px;
+  font-family: NotoSansCJKkr;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #969696;
+}
+.sell-list-container #view-option div:hover {
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+}
+.sell-list-container #view-option #option-choice {
+  font-weight: bold !important;
+  color: #3c3c3c !important;
+}
+.sell-list-container .sell-list-content {
+  text-decoration: none;
+  width: 280px;
+  height: 312px;
+  margin-bottom: 27px;
+}
+.sell-list-container .sell-list-content:hover {
+  cursor: pointer;
+}
+.sell-list-container .sell-list-content:hover img {
+  transform: scale(1.3);
+}
+.sell-list-container .sell-list-content:link {
+  color: unset;
+}
+.sell-list-container .sell-list-content:visited {
+  color: unset;
+}
+.sell-list-container .sell-list-content .img-wrapper {
+  display: inline-block;
+  height: 240px;
+  overflow: hidden;
+  margin: 0 0 8px 0;
+  border-radius: 5px;
+}
+.sell-list-container .sell-list-content .img-wrapper img {
+  width: 280px;
+  height: 240px;
+  transition: 0.5s;
+  padding: 0;
+  margin: 0;
+}
+.sell-list-container .sell-list-content .sell-list-content-title {
+  width: 280px;
+  height: 24px;
+  overflow: hidden;
+  margin: 0 0 7px;
+}
+.sell-list-container .sell-list-content .sell-list-content-star {
+  float: left;
+}
+.sell-list-container .sell-list-content .sell-list-content-review {
+  margin-left: 5px;
+  float: left;
+}
+.sell-list-container .sell-list-content .sell-list-content-price {
+  float: right;
+  font-weight: bold;
+}
+
+.product-detail-container {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: stretch;
+}
+.product-detail-container #board-info {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+.product-detail-container #board-info h1 {
+  width: 30%;
+  font-size: 18px;
+  font-weight: bold;
+  color: #227AFF;
+  margin: 30px 0 0 0;
+}
+.product-detail-container #board-info #board-location {
+  width: 70%;
+  font-size: 14px;
+  color: #a7a7a7;
+  text-align: right;
+  height: fit-content;
+}
+.product-detail-container #product-detail-left-side {
+  width: 60%;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+.product-detail-container #product-detail-left-side #large-image-view {
+  width: 100%;
+  height: 460px;
+  border-radius: 10px;
+  margin-bottom: 21px;
+}
+.product-detail-container #product-detail-left-side #large-image-view img {
+  width: 100%;
+  height: 460px;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+}
+.product-detail-container #product-detail-left-side #small-image-view-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: stretch;
+}
+.product-detail-container #product-detail-left-side #small-image-view-container .small-image-view {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 60px;
+}
+.product-detail-container #product-detail-left-side #small-image-view-container .small-image-view img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+}
+.product-detail-container #product-detail-left-side #small-image-view-container .small-image-view img:hover {
+  cursor: pointer;
+}
+.product-detail-container #product-detail-left-side h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  margin: 0;
+}
+.product-detail-container #product-detail-left-side #service-content {
+  padding: 30px 0 30px 20px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+.product-detail-container #product-detail-left-side #product-detail-review-container {
+  padding: 30px 0 0 20px;
+}
+.product-detail-container #product-detail-left-side #product-detail-review-container .product-detail-review {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+}
+.product-detail-container #product-detail-left-side #product-detail-review-container .product-detail-review .buyer-thumbnail {
+  width: 76px;
+  height: 76px;
+}
+.product-detail-container #product-detail-left-side #product-detail-review-container .product-detail-review .buyer-thumbnail img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.product-detail-container #product-detail-left-side #product-detail-review-container .product-detail-review .review-content {
+  width: 80%;
+  min-height: 76px;
+  margin: auto;
+}
+.product-detail-container #product-detail-left-side #product-detail-review-container .product-detail-review .review-content .buyer-nickname {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+.product-detail-container #product-detail-left-side #product-detail-review-container .product-detail-review .review-content .starAndDate {
+  margin-bottom: 21px;
+}
+.product-detail-container #product-detail-left-side #product-detail-review-container .product-detail-review .review-content .starAndDate .star {
+  font-size: 16px;
+  color: #969696;
+}
+.product-detail-container #product-detail-left-side #product-detail-review-container .product-detail-review .review-content .starAndDate .date {
+  font-size: 16px;
+  color: #000000;
+  margin-left: 30px;
+}
+.product-detail-container #product-detail-left-side #product-detail-review-container .product-detail-review .review-content .comment {
+  font-size: 16px;
+  color: #000000;
+}
+.product-detail-container #product-detail-left-side #product-detail-review-container .product-detail-review .container-underline {
+  margin-bottom: 20px;
+}
+.product-detail-container #product-detail-right-side {
+  width: 40%;
+  position: sticky;
+  top: 0;
+  padding: 20px 30px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  height: fit-content;
+}
+.product-detail-container #product-detail-right-side #right-side-container #type {
+  font-size: 16px;
+  font-weight: bold;
+  color: #277aff;
+  margin-bottom: 20px;
+}
+.product-detail-container #product-detail-right-side #right-side-container #title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 18px;
+}
+.product-detail-container #product-detail-right-side #right-side-container .price {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: right;
+  color: #000000;
+  margin-bottom: 18px;
+}
+.product-detail-container #product-detail-right-side #right-side-container #starAndCountWrapper {
+  text-align: right;
+  font-size: 16px;
+}
+.product-detail-container #product-detail-right-side #right-side-container #starAndCountWrapper #star {
+  color: #969696;
+}
+.product-detail-container #product-detail-right-side #right-side-container #starAndCountWrapper #review-count {
+  color: #000000;
+}
+.product-detail-container #product-detail-right-side #right-side-container #tool-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: stretch;
+  margin: 30px 0 20px 0;
+}
+.product-detail-container #product-detail-right-side #right-side-container #tool-container #report {
+  width: 56px;
+  height: 48px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  color: #dcdcdc;
+  font-size: 26px;
+  text-align: center;
+  line-height: 48px;
+}
+.product-detail-container #product-detail-right-side #right-side-container #tool-container #report:hover {
+  cursor: pointer;
+  color: red;
+}
+.product-detail-container #product-detail-right-side #right-side-container #tool-container #bookmark {
+  width: 56px;
+  height: 48px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  color: #dcdcdc;
+  font-size: 26px;
+  text-align: center;
+  line-height: 48px;
+}
+.product-detail-container #product-detail-right-side #right-side-container #tool-container #bookmark:hover {
+  cursor: pointer;
+  color: yellow;
+}
+.product-detail-container #product-detail-right-side #right-side-container #tool-container #share {
+  width: 56px;
+  height: 48px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  color: #dcdcdc;
+  font-size: 26px;
+  text-align: center;
+  line-height: 48px;
+}
+.product-detail-container #product-detail-right-side #right-side-container #tool-container #share:hover {
+  cursor: pointer;
+  color: skyblue;
+}
+.product-detail-container #product-detail-right-side #right-side-container #tool-container #create-chatroom {
+  width: 198px;
+  height: 48px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #227aff;
+  border: none;
+  border-radius: 5px;
+}
+.product-detail-container #product-detail-right-side #right-side-container #tool-container #create-chatroom:hover {
+  cursor: pointer;
+}
+.product-detail-container #product-detail-right-side #right-side-container #seller-userInfo {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  margin-bottom: 20px;
+}
+.product-detail-container #product-detail-right-side #right-side-container #seller-userInfo #seller-userInfo-thumbnail {
+  width: 20%;
+  height: 76px;
+}
+.product-detail-container #product-detail-right-side #right-side-container #seller-userInfo #seller-userInfo-thumbnail img {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+}
+.product-detail-container #product-detail-right-side #right-side-container #seller-userInfo #seller-userInfo-detail {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  height: 76px;
+  margin-left: 10px;
+  box-sizing: border-box;
+}
+.product-detail-container #product-detail-right-side #right-side-container #seller-userInfo #seller-userInfo-detail #seller-nickname {
+  margin-top: 5px;
+  width: 60%;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+}
+.product-detail-container #product-detail-right-side #right-side-container #seller-userInfo #seller-userInfo-detail #move-profile {
+  width: 40%;
+  font-size: 14px;
+  color: #9d9d9d;
+  text-align: right;
+}
+.product-detail-container #product-detail-right-side #right-side-container #seller-userInfo #seller-userInfo-detail #move-profile:hover {
+  cursor: pointer;
+}
+.product-detail-container #product-detail-right-side #right-side-container #seller-userInfo #seller-userInfo-detail #seller-location {
+  font-size: 16px;
+  color: #000000;
+}
+.product-detail-container #product-detail-right-side #right-side-container #seller-career-container {
+  margin-bottom: 25px;
+}
+.product-detail-container #product-detail-right-side #right-side-container #seller-career-container .certified {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000000;
+}
+.product-detail-container #product-detail-right-side #right-side-container #seller-career-container .certified::before {
+  content: "인증";
+  width: 46px;
+  height: 18px;
+  border-radius: 9px;
+  background-color: #1c67cb;
+  text-align: center;
+  font-size: 12px;
+  color: #fffefe;
+  display: inline-block;
+  margin: 0 10px;
+}
+.product-detail-container #product-detail-right-side #right-side-container #seller-car3er-noncertified {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.chat-container {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: stretch;
+  margin-top: 49px;
+}
+.chat-container #left-side {
+  width: 221px;
+  min-height: 1100px;
+  border: 1px solid #dcdcdc;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.chat-container #left-side #left-side-title {
+  position: relative;
+  line-height: 78px;
+  height: 78px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid #dcdcdc;
+}
+.chat-container #left-side #left-side-title .fa-sync-alt {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #a7a7a7;
+}
+.chat-container #left-side #left-side-title .fa-sync-alt:hover {
+  cursor: pointer;
+  color: #000000;
+}
+.chat-container #left-side .chatroom-list {
+  width: 219px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: center;
+  height: 110px;
+  border-bottom: 1px solid #dcdcdc;
+  margin: auto;
+  padding: 19px;
+  box-sizing: border-box;
+  position: relative;
+}
+.chat-container #left-side .chatroom-list:hover {
+  background-color: #E9F1FF;
+  cursor: pointer;
+}
+.chat-container #left-side .chatroom-list .block-wrapper {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: none;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: center;
+}
+.chat-container #left-side .chatroom-list .block-wrapper .seller-nickname {
+  font-size: 16px;
+  color: #000000;
+  display: inline-block;
+}
+.chat-container #left-side .chatroom-list .block-wrapper .uncheked-message-count {
+  width: 25px;
+  height: 17px;
+  border-radius: 22%;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background-color: #227AFF;
+  text-align: center;
+  line-height: 17px;
+  display: inline-block;
+  margin: 0 5px;
+}
+.chat-container #left-side .chatroom-list .last-message {
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+  font-size: 12px;
+  color: #7c7c7c;
+  margin-top: 5px;
+}
+.chat-container #left-side .chatroom-list .last-message-date {
+  font-size: 12px;
+  color: #a8a8a8;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+.chat-container #right-side {
+  width: 950px;
+}
+.chat-container #right-side #chatroom-info {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  height: 193px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.chat-container #right-side #chatroom-info #board-thumnail {
+  width: 25%;
+}
+.chat-container #right-side #chatroom-info #board-thumnail img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.chat-container #right-side #chatroom-info #board-info {
+  position: relative;
+  width: 55%;
+  border-left: 1px solid #dcdcdc;
+  border-right: 1px solid #dcdcdc;
+  padding: 22px 30px 42px 22px;
+}
+.chat-container #right-side #chatroom-info #board-info #type {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #227aff;
+}
+.chat-container #right-side #chatroom-info #board-info #title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.chat-container #right-side #chatroom-info #board-info #price {
+  right: 22px;
+  bottom: 22px;
+  position: absolute;
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+  vertical-align: bottom;
+}
+.chat-container #right-side #chatroom-info #seller-info {
+  width: 20%;
+  padding: 20px 26px;
+  box-sizing: border-box;
+}
+.chat-container #right-side #chatroom-info #seller-info #seller-thumnail {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+.chat-container #right-side #chatroom-info #seller-info #seller-thumnail img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.chat-container #right-side #chatroom-info #seller-info #seller-nickname {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 15px 0;
+  color: #000000;
+  text-align: center;
+}
+.chat-container #right-side #chatroom-info #seller-info #request-contract {
+  width: 100%;
+  height: 30px;
+  background-color: #227aff;
+  font-size: 14px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+}
+.chat-container #right-side #chatroom-info #seller-info #request-contract:hover {
+  cursor: pointer;
+}
+.chat-container #right-side #chatroom-relative {
+  width: 100%;
+  position: relative;
+}
+.chat-container #right-side #chatroom-relative #chatroom-container {
+  height: 590px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 104px 31px 31px 31px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+.chat-container #right-side #chatroom-relative #chatroom-container #notice {
+  top: 1px;
+  left: 1px;
+  width: 98%;
+  background-color: white;
+  position: absolute;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #7c7c7c;
+  padding: 25px 0;
+  border-top-left-radius: 10px;
+  border-bottom: 1px solid #a7a7a7;
+}
+.chat-container #right-side #chatroom-relative #chatroom-container .my-message {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: flex-end;
+  align-content: stretch;
+  align-items: flex-end;
+  margin-bottom: 18px;
+}
+.chat-container #right-side #chatroom-relative #chatroom-container .my-message .my-message-date {
+  font-size: 12px;
+  color: #808080;
+  text-align: right;
+  padding-right: 10px;
+}
+.chat-container #right-side #chatroom-relative #chatroom-container .my-message .my-message-content {
+  padding: 20px;
+  max-width: 352px;
+  border: none;
+  background-color: #c3d8f8;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.chat-container #right-side #chatroom-relative #chatroom-container .other-message {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-end;
+  margin-bottom: 18px;
+}
+.chat-container #right-side #chatroom-relative #chatroom-container .other-message .other-message-date {
+  font-size: 12px;
+  color: #808080;
+  text-align: left;
+  padding-left: 10px;
+}
+.chat-container #right-side #chatroom-relative #chatroom-container .other-message .other-message-content {
+  padding: 20px;
+  max-width: 352px;
+  border: none;
+  background-color: #ececec;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.chat-container #right-side #chatting-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+  height: 152px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.chat-container #right-side #chatting-container #chat-message-input {
+  width: 80%;
+  box-sizing: border-box;
+  height: 51px;
+  padding: 17px 0 17px 21px;
+  font-size: 16px;
+  border: 1px solid #dcdcdc;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.chat-container #right-side #chatting-container #chat-message-submit {
+  width: 20%;
+  box-sizing: border-box;
+  height: 50px;
+  background-color: #227aff;
+  font-size: 16px;
+  color: #ffffff;
+  border: none;
+}
+.chat-container #right-side #chatting-container #chat-message-submit:hover {
+  cursor: pointer;
+}
+.chat-container #right-side #chatting-container #file-upload-container {
+  width: 910px;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: stretch;
+  height: 51px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+.chat-container #right-side #chatting-container #file-upload-container #upload-button {
+  font-size: 16px;
+  color: #969696;
+  line-height: 51px;
+  margin: 0 20px;
+}
+.chat-container #right-side #chatting-container #file-upload-container #upload-button:hover {
+  cursor: pointer;
+}
+.chat-container #right-side #chatting-container #file-upload-container #file-info {
+  width: 80%;
+  font-size: 16px;
+  color: #353535;
+  text-align: right;
+  line-height: 51px;
+  padding-right: 20px;
+  overflow: hidden;
+}
+
+#mypage-container {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: stretch;
+  margin-top: 49px;
+}
+#mypage-container #left-side {
+  width: 221px;
+  min-height: 1100px;
+  border: 1px solid #dcdcdc;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#mypage-container #left-side #left-side-title {
+  position: relative;
+  line-height: 78px;
+  height: 78px;
+  text-align: center;
+  font-size: 21px;
+  font-weight: bold;
+  border-bottom: 1px solid #dcdcdc;
+}
+#mypage-container #left-side .menu-list {
+  width: 219px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: center;
+  height: 53px;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 0 24px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #000000;
+}
+#mypage-container #left-side .menu-list.menu-choiced {
+  background-color: #227aff;
+  color: #ffffff;
+}
+#mypage-container #left-side .menu-list:hover {
+  background-color: #227aff;
+  cursor: pointer;
+  color: #ffffff;
+}
+#mypage-container #right-side {
+  width: 950px;
+}
+#mypage-container #right-side #mypage-category-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+#mypage-container #right-side #mypage-category-container h1 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #227aff;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+#mypage-container #right-side #mypage-category-container div {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #a7a7a7;
+  font-weight: bold;
+}
+#mypage-container #right-side #mypage-category-container div #category-detail {
+  color: #3c3c3c;
+}
+#mypage-container #right-side #mypage-status-summary-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: space-evenly;
+  align-content: stretch;
+  align-items: center;
+  height: 151px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+#mypage-container #right-side #mypage-status-summary-container .summary-items {
+  text-align: center;
+  font-size: 24px;
+}
+#mypage-container #right-side #mypage-status-summary-container .summary-items .status-name {
+  color: #000000;
+}
+#mypage-container #right-side #mypage-status-summary-container .summary-items .status-amount {
+  color: #227aff;
+}
+#mypage-container #right-side #mypage-status-navigator-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: center;
+}
+#mypage-container #right-side #mypage-status-navigator-container #status-items {
+  font-size: 16px;
+  color: #8d8d8d;
+  display: inline-block;
+}
+#mypage-container #right-side #mypage-status-navigator-container #status-items span {
+  margin: 0 18px;
+}
+#mypage-container #right-side #mypage-status-navigator-container #status-items span#choiced {
+  color: #227aff;
+  font-weight: bold;
+}
+#mypage-container #right-side #mypage-status-navigator-container #status-items span:hover {
+  color: #227aff;
+  font-weight: bold;
+  cursor: pointer;
+}
+#mypage-container #right-side #mypage-status-navigator-container #create-button {
+  display: inline-block;
+}
+#mypage-container #right-side #mypage-status-navigator-container #create-button input {
+  width: 130px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  border: none;
+  background-color: #227aff;
+  border-radius: 5px;
+}
+#mypage-container #right-side #mypage-status-navigator-container #create-button input:hover {
+  cursor: pointer;
+}
+#mypage-container #right-side #mypage-content-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+}
+#mypage-container #right-side #mypage-content-container .seller-items {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  height: 235px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+#mypage-container #right-side #mypage-content-container .seller-items .thumnail {
+  width: 255px;
+  height: 235px;
+}
+#mypage-container #right-side #mypage-content-container .seller-items .thumnail img {
+  width: 255px;
+  height: 235px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#mypage-container #right-side #mypage-content-container .seller-items .content-information {
+  width: 693px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  height: 235px;
+  border-radius: 10px;
+}
+#mypage-container #right-side #mypage-content-container .seller-items .content-information .titleAndPrice {
+  width: 70%;
+  height: 140px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  border-right: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  position: relative;
+}
+#mypage-container #right-side #mypage-content-container .seller-items .content-information .titleAndPrice .type {
+  font-size: 16px;
+  font-weight: bold;
+  color: #277aff;
+  margin-bottom: 10px;
+}
+#mypage-container #right-side #mypage-content-container .seller-items .content-information .titleAndPrice .title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px;
+  height: 42px;
+  overflow: hidden;
+}
+#mypage-container #right-side #mypage-content-container .seller-items .content-information .titleAndPrice .title:hover {
+  cursor: pointer;
+}
+#mypage-container #right-side #mypage-content-container .seller-items .content-information .titleAndPrice .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  text-align: right;
+}
+#mypage-container #right-side #mypage-content-container .seller-items .content-information .titleAndPrice .fa-ellipsis-v {
+  top: 10px;
+  right: 5px;
+  padding: 0 5px;
+  font-size: 25px;
+  color: #bfbfbf;
+  position: absolute;
+}
+#mypage-container #right-side #mypage-content-container .seller-items .content-information .titleAndPrice .fa-ellipsis-v:hover {
+  color: #000000;
+  cursor: pointer;
+}
+#mypage-container #right-side #mypage-content-container .seller-items .content-information .status {
+  width: 30%;
+  height: 140px;
+  padding: 30px 26px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #dcdcdc;
+}
+#mypage-container #right-side #mypage-content-container .seller-items .content-information .status div {
+  font-size: 20px;
+  font-weight: bold;
+  color: #9d9d9d;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#mypage-container #right-side #mypage-content-container .seller-items .content-information .status div.status-detail-nonapproval {
+  width: 80%;
+  margin: auto;
+  padding: 4px 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #000000;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+#mypage-container #right-side #mypage-content-container .seller-items .content-information .status div.status-detail-approval {
+  width: 80%;
+  margin: auto;
+  padding: 4px 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #277aff;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+#mypage-container #right-side #mypage-content-container .seller-items .content-information .status-message {
+  font-size: 14px;
+  padding: 0 32px;
+  line-height: 1.71;
+  box-sizing: border-box;
+}
+.contract-items {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  height: 235px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.contract-items .thumnail {
+  width: 255px;
+  height: 235px;
+}
+.contract-items .thumnail img {
+  width: 255px;
+  height: 235px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.contract-items .content-information {
+  width: 693px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  height: 235px;
+  border-radius: 10px;
+}
+.contract-items .content-information .titleAndPrice {
+  width: 75%;
+  height: 235px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  border-right: 1px solid #dcdcdc;
+  position: relative;
+}
+.contract-items .content-information .titleAndPrice .top {
+  height: 125px;
+}
+.contract-items .content-information .titleAndPrice .top .type {
+  font-size: 16px;
+  font-weight: bold;
+  color: #277aff;
+  margin-bottom: 10px;
+}
+.contract-items .content-information .titleAndPrice .top .title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.contract-items .content-information .titleAndPrice .top .title:hover {
+  cursor: pointer;
+}
+.contract-items .content-information .titleAndPrice .top .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  text-align: right;
+}
+.contract-items .content-information .titleAndPrice .bottom {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-end;
+  height: 70px;
+}
+.contract-items .content-information .titleAndPrice .bottom .left-side {
+  width: 50%;
+  font-size: 14px;
+  color: #000000;
+  font-weight: bold;
+}
+.contract-items .content-information .titleAndPrice .bottom .left-side .cancle-date {
+  color: #da3c3c;
+}
+.contract-items .content-information .titleAndPrice .bottom .right-side {
+  width: 50%;
+  text-align: right;
+  font-size: 16px;
+  color: #969696;
+}
+.contract-items .content-information .titleAndPrice .bottom .right-side .reqeust-cancle-notice {
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+}
+.contract-items .content-information .titleAndPrice .bottom .right-side .contract-cancle-notice {
+  font-size: 14px;
+  font-weight: bold;
+}
+.contract-items .content-information .other-user {
+  width: 25%;
+  height: 235px;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.contract-items .content-information .other-user .other-user-thumnail {
+  width: 76px;
+  height: 76px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.contract-items .content-information .other-user .other-user-thumnail img {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+}
+.contract-items .content-information .other-user .other-user-nickname {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.contract-items .content-information .other-user .other-user-status-container {
+  font-size: 14px;
+  color: #ffffff;
+}
+.contract-items .content-information .other-user .other-user-status-container .status-01 {
+  width: 120px;
+  border-radius: 5px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+  background-color: #8c8c8c;
+}
+.contract-items .content-information .other-user .other-user-status-container .status-01:hover {
+  cursor: pointer;
+}
+.contract-items .content-information .other-user .other-user-status-container .status-02 {
+  width: 120px;
+  border-radius: 5px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+  background-color: #227aff;
+}
+.contract-items .content-information .other-user .other-user-status-container .status-02:hover {
+  cursor: pointer;
+}
+.contract-items .content-information .other-user .other-user-status-container .status-03 {
+  width: 120px;
+  border-radius: 5px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+  background-color: #aa2525;
+}
+.contract-items .content-information .other-user .other-user-status-container .status-03:hover {
+  cursor: pointer;
+}
+.contract-items .content-information .other-user .other-user-status-container .status-04 {
+  width: 120px;
+  border-radius: 5px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+  background-color: #000000;
+}
+.contract-items .content-information .other-user .other-user-status-container .status-04:hover {
+  cursor: pointer;
+}
+.contract-items .content-information .other-user .other-user-status-container .status-05 {
+  width: 120px;
+  border-radius: 5px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+  background-color: #227aff;
+}
+.contract-items .content-information .other-user .other-user-status-container .status-05:hover {
+  cursor: pointer;
+}
+.contract-items .content-information .other-user .other-user-status-container .status-06 {
+  width: 120px;
+  border-radius: 5px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+  background-color: #227aff;
+}
+.contract-items .content-information .other-user .other-user-status-container .status-06:hover {
+  cursor: pointer;
+}
+.contract-items .content-information .other-user .other-user-status-container .status-07 {
+  width: 120px;
+  border-radius: 5px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+  background-color: #8c8c8c;
+}
+.contract-items .content-information .other-user .other-user-status-container .status-07:hover {
+  cursor: pointer;
+}
+
+#mypage-container #right-side #mypage-content-container .review-detail-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+#mypage-container #right-side #mypage-content-container .review-detail-container .nonexistent-review {
+  font-size: 16px;
+  font-weight: bold;
+  color: #9a9999;
+  text-align: center;
+  margin: auto;
+}
+#mypage-container #right-side #mypage-content-container .review-detail-container .left-side {
+  width: 50%;
+  margin-bottom: 10px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+#mypage-container #right-side #mypage-content-container .review-detail-container .left-side span {
+  font-size: 16px;
+  color: #000000;
+  font-weight: bold;
+}
+#mypage-container #right-side #mypage-content-container .review-detail-container .left-side span.review-star {
+  margin-left: 30px;
+  color: #969696;
+}
+#mypage-container #right-side #mypage-content-container .review-detail-container .right-side {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: flex-end;
+  align-content: stretch;
+  align-items: stretch;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+#mypage-container #right-side #mypage-content-container .review-detail-container .right-side input {
+  display: inline-block;
+}
+#mypage-container #right-side #mypage-content-container .review-detail-container .right-side input.review-modify {
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 20px;
+  color: #ffffff;
+  background-color: orange;
+}
+#mypage-container #right-side #mypage-content-container .review-detail-container .right-side input.review-modify:hover {
+  cursor: pointer;
+}
+#mypage-container #right-side #mypage-content-container .review-detail-container .right-side input.review-register {
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 20px;
+  color: #ffffff;
+  background-color: #227aff;
+}
+#mypage-container #right-side #mypage-content-container .review-detail-container .right-side input.review-register:hover {
+  cursor: pointer;
+}
+#mypage-container #right-side #mypage-content-container .review-detail-container textarea {
+  resize: none;
+  width: 910px;
+  height: 89px;
+  margin: auto;
+  font-size: 16px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=/style.97fcb138.css.map */

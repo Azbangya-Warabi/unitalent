@@ -1,158 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <title>Unit</title>
+</head>
+
+<body>
 {{>layout/header}}
 <main>
-    <div class="container-wrap">
+    <div class="home-content-container">
         <article>
             <div class="banner"></div>
         </article>
 
         <article>
-            <h1><img class="home-circle" src="../image/home-circle/타원 1.png" alt="">최근 재능 판매 게시글</h1>
+            <h1><img class="home-circle" src="/image/home-circle/타원 1.png" alt="">최근 재능 판매 게시글</h1>
             <article>
-                <div class="container-wrap">
-                    <div class="home-content">
-                        <img src="../lion.jpg" alt="컨텐츠 이미지">
-                        <div class="home-content-title">동해물과 백두산이 마르고 닳도록 하느님</div>
-                        <div class="home-content-star">⭐️ 4.8 |</div>
-                        <div class="home-content-review">28개의 평가</div>
-                        <div class="home-content-price">50,000원</div>
-                    </div>
-                    <div class="home-content">
-                        <img src="../lion.jpg" alt="컨텐츠 이미지">
-                        <div class="home-content-title">동해물과 백두산이 마르고 닳도록 하느님</div>
-                        <div class="home-content-star">⭐️ 4.8 |</div>
-                        <div class="home-content-review">28개의 평가</div>
-                        <div class="home-content-price">50,000원</div>
-                    </div>
-                    <div class="home-content">
-                        <img src="../lion.jpg" alt="컨텐츠 이미지">
-                        <div class="home-content-title">동해물과 백두산이 마르고 닳도록 하느님</div>
-                        <div class="home-content-star">⭐️ 4.8 |</div>
-                        <div class="home-content-review">28개의 평가</div>
-                        <div class="home-content-price">50,000원</div>
-                    </div>
-                    <div class="home-content">
-                        <img src="../lion.jpg" alt="컨텐츠 이미지">
-                        <div class="home-content-title">동해물과 백두산이 마르고 닳도록 하느님</div>
-                        <div class="home-content-star">⭐️ 4.8 |</div>
-                        <div class="home-content-review">28개의 평가</div>
-                        <div class="home-content-price">50,000원</div>
-                    </div>
-                    <div class="home-content">
-                        <img src="../lion.jpg" alt="컨텐츠 이미지">
-                        <div class="home-content-title">동해물과 백두산이 마르고 닳도록 하느님</div>
-                        <div class="home-content-star">⭐️ 4.8 |</div>
-                        <div class="home-content-review">28개의 평가</div>
-                        <div class="home-content-price">50,000원</div>
-                    </div>
-                    <div class="home-content">
-                        <img src="../lion.jpg" alt="컨텐츠 이미지">
-                        <div class="home-content-title">동해물과 백두산이 마르고 닳도록 하느님</div>
-                        <div class="home-content-star">⭐️ 4.8 |</div>
-                        <div class="home-content-review">28개의 평가</div>
-                        <div class="home-content-price">50,000원</div>
-                    </div>
-                    <div class="home-content">
-                        <img src="../lion.jpg" alt="컨텐츠 이미지">
-                        <div class="home-content-title">동해물과 백두산이 마르고 닳도록 하느님</div>
-                        <div class="home-content-star">⭐️ 4.8 |</div>
-                        <div class="home-content-review">28개의 평가</div>
-                        <div class="home-content-price">50,000원</div>
-                    </div>
-                    <div class="home-content">
-                        <img src="../lion.jpg" alt="컨텐츠 이미지">
-                        <div class="home-content-title">동해물과 백두산이 마르고 닳도록 하느님</div>
-                        <div class="home-content-star">⭐️ 4.8 |</div>
-                        <div class="home-content-review">28개의 평가</div>
-                        <div class="home-content-price">50,000원</div>
-                    </div>
+                <div class="home-content-container">
+                    {{#product-sell-preview}}
+                        <a href="/product/detail/{{productId}}" class="home-content">
+                            <div class="img-wrapper"><img src="{{image}}" alt="컨텐츠 이미지"></div>
+                            <div class="home-content-title">{{title}}</div>
+                            <div class="home-content-star">⭐️ {{averageStarScore}} |</div>
+                            <div class="home-content-review">{{reviewCount}}개의 평가</div>
+                            <div class="home-content-price">{{price}}원</div>
+                        </a>
+                    {{/product-sell-preview}}
                 </div>
             </article>
         </article>
 
         <article>
-            <div class="middle-banner"></div>
+            <div class="home-middle-banner"></div>
         </article>
 
         <article>
-            <h1><img class="home-circle" src="../image/home-circle/타원 1.png" alt="">최근 재능 멘토 게시글</h1>
+            <h1><img class="home-circle" src="/image/home-circle/타원 1.png" alt="">최근 재능 멘토 게시글</h1>
             <article>
-                <div class="container-wrap">
-                    <div class="home-content">
-                        <img src="../lion.jpg" alt="컨텐츠 이미지">
-                        <div class="home-content-title">동해물과 백두산이 마르고 닳도록 하느님</div>
-                        <div class="home-content-star">⭐️ 4.8 |</div>
-                        <div class="home-content-review">28개의 평가</div>
-                        <div class="home-content-price">50,000원</div>
-                    </div>
-                    <div class="home-content">
-                        <img src="../lion.jpg" alt="컨텐츠 이미지">
-                        <div class="home-content-title">동해물과 백두산이 마르고 닳도록 하느님</div>
-                        <div class="home-content-star">⭐️ 4.8 |</div>
-                        <div class="home-content-review">28개의 평가</div>
-                        <div class="home-content-price">50,000원</div>
-                    </div>
-                    <div class="home-content">
-                        <img src="../lion.jpg" alt="컨텐츠 이미지">
-                        <div class="home-content-title">동해물과 백두산이 마르고 닳도록 하느님</div>
-                        <div class="home-content-star">⭐️ 4.8 |</div>
-                        <div class="home-content-review">28개의 평가</div>
-                        <div class="home-content-price">50,000원</div>
-                    </div>
-                    <div class="home-content">
-                        <img src="../lion.jpg" alt="컨텐츠 이미지">
-                        <div class="home-content-title">동해물과 백두산이 마르고 닳도록 하느님</div>
-                        <div class="home-content-star">⭐️ 4.8 |</div>
-                        <div class="home-content-review">28개의 평가</div>
-                        <div class="home-content-price">50,000원</div>
-                    </div>
-                    <div class="home-content">
-                        <img src="../lion.jpg" alt="컨텐츠 이미지">
-                        <div class="home-content-title">동해물과 백두산이 마르고 닳도록 하느님</div>
-                        <div class="home-content-star">⭐️ 4.8 |</div>
-                        <div class="home-content-review">28개의 평가</div>
-                        <div class="home-content-price">50,000원</div>
-                    </div>
-                    <div class="home-content">
-                        <img src="../lion.jpg" alt="컨텐츠 이미지">
-                        <div class="home-content-title">동해물과 백두산이 마르고 닳도록 하느님</div>
-                        <div class="home-content-star">⭐️ 4.8 |</div>
-                        <div class="home-content-review">28개의 평가</div>
-                        <div class="home-content-price">50,000원</div>
-                    </div>
-                    <div class="home-content">
-                        <img src="../lion.jpg" alt="컨텐츠 이미지">
-                        <div class="home-content-title">동해물과 백두산이 마르고 닳도록 하느님</div>
-                        <div class="home-content-star">⭐️ 4.8 |</div>
-                        <div class="home-content-review">28개의 평가</div>
-                        <div class="home-content-price">50,000원</div>
-                    </div>
-                    <div class="home-content">
-                        <img src="../lion.jpg" alt="컨텐츠 이미지">
-                        <div class="home-content-title">동해물과 백두산이 마르고 닳도록 하느님</div>
-                        <div class="home-content-star">⭐️ 4.8 |</div>
-                        <div class="home-content-review">28개의 평가</div>
-                        <div class="home-content-price">50,000원</div>
-                    </div>
+                <div class="home-content-container">
+                    {{#product-grow-preview}}
+                        <a href="/product/detail/{{productId}}" class="home-content">
+                            <div class="img-wrapper"><img src="{{image}}" alt="컨텐츠 이미지"></div>
+                            <div class="home-content-title">{{title}}</div>
+                            <div class="home-content-star">⭐️ {{averageStarScore}} |</div>
+                            <div class="home-content-review">{{reviewCount}}개의 평가</div>
+                            <div class="home-content-price">{{price}}원</div>
+                        </a>
+                    {{/product-grow-preview}}
                 </div>
             </article>
         </article>
     </div>
 </main>
-<footer>
-    <div class="container">
-        <div>서비스 이용약관</div>
-        <div>개인정보 처리방침</div>
-        <div>고객 지원 센터</div>
-    </div>
-    <div class="container">
-        <div>강원도 춘천시 백령로 61번길 17,203호<br>
-            사업자등록번호:123-45-78910<br>
-            대표자:김상욱<br>
-            문의 메일:cs.univalue@gmail.com
-        </div>
-        <div>(주)유니벨류는 통신판매중개자이며, 통신판매의 당사자가 아닙니다. 상품, 상품정보, 거래에 관한 의무와 책임은 판매회원에게 있습니다.<br>
-            (주)유니벨류 사이트의 상품/판매회원/중개 서비스/거래정보, 콘첸트, UI등에 대한 무단복제, 전송, 배포, 스크래핑 등의 행위는 저작권법, 콘텐츠산업 진흥법 등 관련법령에 의하여 엄격히 금지됩니다.
-        </div>
-    </div>
-</footer>
 {{>layout/footer}}

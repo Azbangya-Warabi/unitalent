@@ -1,11 +1,11 @@
 package kr.co.unitalent.service;
 
-import kr.co.unitalent.domain.posts.TalentSell;
-import kr.co.unitalent.domain.posts.TalentSellModifiedHistoryRepository;
-import kr.co.unitalent.domain.posts.TalentSellRepository;
-import kr.co.unitalent.web.dto.admin.TalentSellModifiedHistoryResponseDto;
-import kr.co.unitalent.web.dto.admin.TalentSellStatusResponseDto;
-import kr.co.unitalent.web.dto.admin.TalentSellStatusUpdateDto;
+import kr.co.unitalent.domain.posts.TalentProduct;
+import kr.co.unitalent.domain.posts.TalentProductModifiedHistoryRepository;
+import kr.co.unitalent.domain.posts.TalentProductRepository;
+import kr.co.unitalent.web.dto.admin.TalentProductModifiedHistoryResponseDto;
+import kr.co.unitalent.web.dto.admin.TalentProductStatusResponseDto;
+import kr.co.unitalent.web.dto.admin.TalentProductStatusUpdateDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,21 +17,23 @@ import java.util.stream.Collectors;
 @Service
 public class AdminService {
 
-    private final TalentSellRepository talentSellRepository;
-    private final TalentSellModifiedHistoryRepository talentSellModifiedHistoryRepository;
+    private final TalentProductRepository talentProductRepository;
+    private final TalentProductModifiedHistoryRepository talentProductModifiedHistoryRepository;
 
-    public List<TalentSellStatusResponseDto> findAllNonApprovalStatus() {
-        return talentSellRepository.findByStatusOrderByModifiedDateDesc("비승인").stream().map(TalentSellStatusResponseDto::new).collect(Collectors.toList());
+    @Transactional(readOnly = true)
+    public List<TalentProductStatusResponseDto> findAllNonApprovalStatus() {
+        return talentProductRepository.findByStatusOrderByModifiedDateDesc("비승인").stream().map(TalentProductStatusResponseDto::new).collect(Collectors.toList());
     }
 
-    public List<TalentSellModifiedHistoryResponseDto> findAllModifiedHistory(Long boardNumber) {
-        return talentSellModifiedHistoryRepository.findByBoardNumberOrderByCreateDateDesc(boardNumber).stream().map(TalentSellModifiedHistoryResponseDto::new).collect(Collectors.toList());
+    @Transactional(readOnly = true)
+    public List<TalentProductModifiedHistoryResponseDto> findAllModifiedHistory(Long boardNumber) {
+        return talentProductModifiedHistoryRepository.findByIdOrderByCreateDateDesc(boardNumber).stream().map(TalentProductModifiedHistoryResponseDto::new).collect(Collectors.toList());
     }
 
     @Transactional
-    public Long changeTalentSellStatus(Long boardNumber, TalentSellStatusUpdateDto talentSellStatusUpdateDto) {
-        TalentSell entity = talentSellRepository.findById(boardNumber).orElseThrow(IllegalAccessError::new);
-        entity.changeStatus(talentSellStatusUpdateDto.getStatus(), talentSellStatusUpdateDto.getStatusMessage());
+    public Long changeProductStatus(Long boardNumber, TalentProductStatusUpdateDto talentProductStatusUpdateDto) {
+        TalentProduct entity = talentProductRepository.findById(boardNumber).orElseThrow(IllegalAccessError::new);
+        entity.changeStatus(talentProductStatusUpdateDto.getStatus(), talentProductStatusUpdateDto.getStatusMessage());
         return boardNumber;
     }
 

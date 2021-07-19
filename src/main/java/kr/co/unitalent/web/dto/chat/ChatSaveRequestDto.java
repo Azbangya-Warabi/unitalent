@@ -1,6 +1,8 @@
 package kr.co.unitalent.web.dto.chat;
 
 import kr.co.unitalent.domain.chat.Chat;
+import kr.co.unitalent.domain.chat.Chatroom;
+import kr.co.unitalent.domain.user.User;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,9 +14,9 @@ import javax.validation.constraints.Size;
 @ToString
 @NoArgsConstructor
 public class ChatSaveRequestDto {
-    private Long roomNumber;
+    private Long chatroomId;
 
-    private String requestUser;
+    private Long requestUser;
 
     @Size(max = 300)
     private String message;
@@ -22,8 +24,8 @@ public class ChatSaveRequestDto {
     private String image;
 
     @Builder
-    public ChatSaveRequestDto(Long roomNumber, String requestUser, String message, String image) {
-        this.roomNumber = roomNumber;
+    public ChatSaveRequestDto(Long chatroomId, Long requestUser, String message, String image) {
+        this.chatroomId = chatroomId;
         this.requestUser = requestUser;
         this.message = message;
         this.image = image;
@@ -31,8 +33,8 @@ public class ChatSaveRequestDto {
 
     public Chat toEntity() {
         return Chat.builder()
-                .roomNumber(roomNumber)
-                .requestUser(requestUser)
+                .chatroom(Chatroom.builder().id(chatroomId).build())
+                .requestUser(User.builder().id(requestUser).build())
                 .message(message)
                 .image(image)
                 .build();

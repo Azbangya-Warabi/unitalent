@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ChatRepository extends JpaRepository<Chat, Long> {
 
-    List<Chat> findByRoomNumberOrderByCreateDate(Long roomNumber);
+    List<Chat> findByChatroomIdOrderByCreateDate(Long chatroomId);
 
-    List<Chat> findByRoomNumberAndRequestUserAndChecked(Long roomNumber, String requestUser, boolean checked);
+    List<Chat> findByChatroomIdAndRequestUserIdAndChecked(Long chatroomId, Long requestUserId, boolean checked);
 }

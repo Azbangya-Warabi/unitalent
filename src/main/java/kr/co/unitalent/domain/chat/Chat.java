@@ -1,6 +1,7 @@
 package kr.co.unitalent.domain.chat;
 
 import kr.co.unitalent.domain.BaseTimeEntity;
+import kr.co.unitalent.domain.user.User;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,13 +16,13 @@ public class Chat extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long chatNumber;
+    private Long id;
 
-    @Column(nullable = false)
-    private Long roomNumber;
+    @ManyToOne
+    private Chatroom chatroom;
 
-    @Column(nullable = false)
-    private String requestUser;
+    @ManyToOne
+    private User requestUser;
 
     @Column(length = 300)
     private String message;
@@ -33,15 +34,15 @@ public class Chat extends BaseTimeEntity {
     private Boolean checked;
 
     @Builder
-    public Chat (Long roomNumber, String requestUser, String message, String image) {
-        this.roomNumber = roomNumber;
+    public Chat (Chatroom chatroom, User requestUser, String message, String image) {
+        this.chatroom = chatroom;
         this.requestUser = requestUser;
         this.message = message;
         this.image = image;
     }
 
-    public void changeCheckedToTrue(boolean checked) {
-        this.checked = checked;
+    public void changeCheckedToTrue() {
+        this.checked = true;
     }
 
     @PrePersist

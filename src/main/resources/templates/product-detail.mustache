@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <title>Unit</title>
+</head>
+
+<body>
+{{>layout/header}}
+<main>
+    {{#product-detail}}
+        <div class="product-detail-container">
+            <div id="board-info">
+                <h1>{{categoryId}}</h1>
+                <div id="board-location">홈  >  {{type}}  >  {{categoryId}}</div>
+            </div>
+            <div id="product-detail-left-side">
+                {{#images}}
+                <div id="large-image-view">
+                    <img id="large-image" src="{{firstImage}}" alt="메인 이미지">
+                </div>
+                <div id="small-image-view-container">
+                    <div class="small-image-view">
+                        <img src="{{firstImage}}" alt="서브 이미지">
+                    </div>
+                    <div class="small-image-view">
+                        <img src="{{secondImage}}" alt="서브 이미지">
+                    </div>
+                    <div class="small-image-view">
+                        <img src="{{thirdImage}}" alt="서브 이미지">
+                    </div>
+                    <div class="small-image-view">
+                        <img src="{{fourthImage}}" alt="서브 이미지">
+                    </div>
+                    <div class="small-image-view">
+                        <img src="{{fifthImage}}" alt="서브 이미지">
+                    </div>
+                </div>
+                {{/images}}
+                <h2>서비스 소개</h2>
+                <div id="service-content">{{serviceInformation}}</div>
+
+                <h2>평가 및 후기</h2>
+                <div id="product-detail-review-container">
+                    {{#product-review}}
+                        <div class="product-detail-review">
+                            <div class="buyer-thumbnail">
+                                <img src="{{buyerThumbnail}}" alt="구매자 이미지">
+                            </div>
+                            <div class="review-content">
+                                <div class="buyer-nickname">{{buyerNickname}}</div>
+                                <div class="starAndDate">
+                                    <span class="star">⭐️⭐️⭐️⭐️⭐️ {{reviewStar}}</span>
+                                    &nbsp;
+                                    <span class="date">{{reviewDate}}</span>
+                                </div>
+                                <div class="comment">{{reviewComment}}</div>
+                            </div>
+                            <div class="container-underline"></div>
+                        </div>
+                    {{/product-review}}
+                </div>
+            </div>
+            <div id="product-detail-right-side">
+                <div id="right-side-container">
+                    <div id="type">{{type}}</div>
+                    <div id="title">{{title}}</div>
+                    <div class="price">가격:<span class="price">{{price}}</span>원</div>
+                    <div id="starAndCountWrapper"><span id="star">⭐️⭐️⭐️⭐️⭐️ {{averageStarScore}}</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span id="review-count">{{reviewCount}}개의 리뷰</span></div>
+                    <div id="tool-container">
+                        <div id="report"><i class="fas fa-exclamation"></i></div>
+                        <div id="bookmark"><i class="fas fa-star"></i></div>
+                        <div id="share"><i class="fas fa-share-alt"></i></div>
+                        <input id="create-chatroom" type="button" value="문의하기">
+                    </div>
+                    <div class="container-underline"></div>
+                    <div id="seller-userInfo">
+                        <div id="seller-userInfo-thumbnail">
+                            <img src="{{thumbnail}}" alt="판매자 이미지">
+                        </div>
+                        <div id="seller-userInfo-detail">
+                            <div id="seller-nickname">{{nickname}}</div>
+                            <div id="move-profile">프로필 둘러보기</div>
+                            <div id="seller-location">{{locationId}}</div>
+                        </div>
+                    </div>
+                    <div id="seller-career-container">
+                        {{#certificationCareer}}
+                            <div class="certified">{{careerName}}</div>
+                        {{/certificationCareer}}
+                    </div>
+                    <div id="seller-career-noncertified">
+                        {{#nonCertificationCareer}}
+                            <span>{{careerName}} </span>
+                        {{/nonCertificationCareer}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/product-detail}}
+</main>
+{{>layout/footer}}
