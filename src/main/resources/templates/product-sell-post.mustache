@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="ko">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <title>Unit</title>
+</head>
+
+<body>
+{{>layout/header}}
+<main>
+    <article>
+        <div class="sell-post-container">
+            <div class="sell-post-category-container">
+                <h1>재능 판매 글 등록</h1>
+                <div>글등록 > <span>관리자 심사 요청</span></div>
+            </div>
+            <div class="container-underline"></div>
+            <div></div>
+            <h2>제목(<span id="title-length">0</span>/30자)</h2>
+            <input type="text" name="title" id="title" maxlength="30">
+            <div class="tip">
+                <div class="left"></div>
+                <div class="right">*저작권법, 식품위생법, 방송통신법 등 각종 법률에 위반되는 금칙어는 사용하지 말아주세요.</div>
+            </div>
+            <h2>카테고리</h2>
+            <select id="category-list" name="category">
+                <option hidden>선택</option>
+                <option>디자인</option>
+                <option>IT프로그래밍</option>
+                <option>통역 번역</option>
+                <option>마케팅</option>
+                <option>영상/편집</option>
+                <option>레슨</option>
+                <option>스포츠</option>
+                <option>문서작업</option>
+            </select>
+            <h2>서비스소개<br>(<span id="service-information-length">0</span>/3000자)</h2>
+            <textarea name="service-information" id="service-information" cols="30" rows="2" maxlength="3000"></textarea>
+            <h2>이미지사진 0/5</h2>
+            <div class="sell-post-file-container clearfix::after">
+                <div class="image-container" id="first-image">
+                    <i class="fas fa-plus-circle"></i>
+                    <i class="fas fa-times-circle sell-post-image-cancel-button visibility-hidden"></i>
+                    <input id="first-image-repository" class="images" type="file" name="" accept="image/*" hidden value="">
+                    <input type="text" class="isSaved" value="" hidden readonly>
+                </div>
+                <div class="image-container sub-image" id="second-image">
+                    <i class="fas fa-plus-circle"></i>
+                    <i class="fas fa-times-circle sell-post-image-cancel-button visibility-hidden"></i>
+                    <input id="second-image-repository" class="images" type="file" name="" accept="image/*" hidden value="">
+                    <input type="text" class="isSaved" value="" hidden readonly>
+                </div>
+                <div class="image-container sub-image" id="third-image">
+                    <i class="fas fa-plus-circle"></i>
+                    <i class="fas fa-times-circle sell-post-image-cancel-button visibility-hidden"></i>
+                    <input id="third-image-repository" class="images" type="file" name="" accept="image/*" hidden value="">
+                    <input type="text" class="isSaved" value="" hidden readonly>
+                </div>
+                <div class="image-container sub-image" id="fourth-image">
+                    <i class="fas fa-plus-circle"></i>
+                    <i class="fas fa-times-circle sell-post-image-cancel-button visibility-hidden"></i>
+                    <input id="fourth-image-repository" class="images" type="file" name="" accept="image/*" hidden value="">
+                    <input type="text" class="isSaved" value="" hidden readonly>
+                </div>
+                <div class="image-container sub-image" id="fifth-image">
+                    <i class="fas fa-plus-circle"></i>
+                    <i class="fas fa-times-circle sell-post-image-cancel-button visibility-hidden"></i>
+                    <input id="fifth-image-repository" class="images" type="file" name="" accept="image/*" hidden value="">
+                    <input type="text" class="isSaved" value="" hidden readonly>
+                </div>
+            </div>
+            <div class="tip">
+                <div class="left"></div>
+                <div class="right">
+                    <div>· 이미지의 표준 사이즈는 000x000입니다.</div>
+                    <div>· 반드시 판매 상품과 연관 있는 이미지로 등록해주세요.</div>
+                    <div>· 과도한 노출이 있는 이미지를 등록 또는 도용을 삼가합니다.</div>
+                    <div>· 해상도가 비정상적으로 낮은 이미지의 경우 미승인 및 승인거절 처리 될 수 있습니다.</div>
+                    <div>· 좌측의 가장 큰 이미지 선택칸을 통해 선택한 이미지가 메인 이미지로 적용 됩니다.</div>
+                    <div>· 우측의 작은 4개의 이미지는 서브 이미지로 적용 됩니다.</div>
+                    <div>· </div>
+                    <div>· </div>
+                    <div>· 저작권에 위배되는 저작물 및 연예인 이미지, 이름 등이 등록될 경우, 승인거절 처리될 수 있습니다. (상품이미지 동일)</div>
+                </div>
+            </div>
+            <h2>가격</h2>
+            <div class="price-wrapper">
+                <input type="text" id="price" name="price">
+                <div id="price-unit">원</div>
+            </div>
+            <div id="notice">관리자의 검토 이후 빠른 시일 이내에 승인처리 하도록 하겠습니다.</div>
+            <input type="button" value="심사요청" id="submit">
+        </div>
+    </article>
+</main>
+{{>layout/footer}}

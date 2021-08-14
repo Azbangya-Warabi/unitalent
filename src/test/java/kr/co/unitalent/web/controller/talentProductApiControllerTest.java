@@ -65,7 +65,6 @@ class talentProductApiControllerTest {
                 .title(title)
                 .categoryId(category)
                 .serviceInformation(serviceInformation)
-                .images(images)
                 .price(price)
                 .type(type)
                 .build();

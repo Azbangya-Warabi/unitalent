@@ -24,7 +24,6 @@ public class TalentProductModifiedHistorySaveDto {
         this.title = talentProduct.getTitle();
         this.categoryId = talentProduct.getCategory().getId();
         this.serviceInformation = talentProduct.getServiceInformation();
-        this.images = talentProduct.getImages();
         this.price = talentProduct.getPrice();
         this.statusMessage = talentProduct.getStatusMessage();
     }

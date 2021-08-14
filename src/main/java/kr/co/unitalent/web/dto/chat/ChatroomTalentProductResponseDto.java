@@ -14,7 +14,6 @@ public class ChatroomTalentProductResponseDto {
     private Long id;
     private String title;
     private Long price;
-    private String images;
 
     private String thumbnail;
     private String nickname;
@@ -24,7 +23,6 @@ public class ChatroomTalentProductResponseDto {
         this.id = talentProduct.getId();
         this.title = talentProduct.getTitle();
         this.price = talentProduct.getPrice();
-        this.images = talentProduct.getImages();
 
         this.thumbnail = user.getThumbnail();
         this.nickname = user.getNickname();

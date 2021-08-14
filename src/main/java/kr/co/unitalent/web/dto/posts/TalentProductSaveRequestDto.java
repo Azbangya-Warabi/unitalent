@@ -1,47 +1,53 @@
 package kr.co.unitalent.web.dto.posts;
 
+import com.fasterxml.jackson.annotation.JsonValue;
 import kr.co.unitalent.domain.global.Category;
 import kr.co.unitalent.domain.posts.TalentProduct;
+import kr.co.unitalent.domain.posts.TalentProductImage;
 import kr.co.unitalent.domain.user.User;
 import lombok.*;
+import org.springframework.web.multipart.MultipartFile;
 
-import javax.validation.constraints.Min;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
+import java.util.List;
 
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
 public class TalentProductSaveRequestDto {
-    @NonNull
+
     private Long userId;
 
     @Size(min = 1, max = 30)
-    @NonNull
+    @NotBlank
     private String title;
 
-    @NonNull
+    @NotBlank
     private String categoryId;
 
     @Size(min = 1, max = 3000)
-    @NonNull
+    @NotBlank
     private String serviceInformation;
 
-    private String images;
-
     @Min(0)
-    @NonNull
+    @NotNull
     private Long price;
 
+    @NotBlank
     private String type;
 
+    private List<MultipartFile> images;
+
+    private List<String> imageInformation;
+
+
     @Builder
-    public TalentProductSaveRequestDto(Long userId, String title, String categoryId, String serviceInformation, String images, Long price, String type) {
+    public TalentProductSaveRequestDto(Long userId, String title, String categoryId, String serviceInformation, Long price, String type) {
         this.userId = userId;
         this.title = title;
         this.categoryId = categoryId;
         this.serviceInformation = serviceInformation;
-        this.images = images;
         this.price = price;
         this.type = type;
     }
@@ -52,9 +58,25 @@ public class TalentProductSaveRequestDto {
                 .title(title)
                 .category(Category.builder().id(categoryId).build())
                 .serviceInformation(serviceInformation)
-                .images(images)
                 .price(price)
                 .type(type)
                 .build();
     }
+
+    public TalentProductImage toSavedImageEntity(TalentProduct talentProduct, int fileIndex, ImageDto imageInfo) {
+        return TalentProductImage.builder()
+                .talentProduct(talentProduct)
+                .imageUrl(images.get(fileIndex).getName())
+                .dataOrder(Long.parseLong(imageInfo.getOrder()))
+                .build();
+    }
+
+    public TalentProductImage toUnSavedImageEntity(TalentProduct talentProduct, int fileIndex, ImageDto imageInfo, String url) {
+        return TalentProductImage.builder()
+                .talentProduct(talentProduct)
+                .imageUrl(url)
+                .dataOrder(Long.parseLong(imageInfo.getOrder()))
+                .build();
+    }
+
 }

@@ -43,9 +43,6 @@ public class TalentProduct extends BaseTimeEntity {
     @Column(length = 3000, nullable = false)
     private String serviceInformation;
 
-    @Column(length = 4000)
-    private String images;
-
     private Long price;
 
     @Column(nullable = false)
@@ -60,6 +57,9 @@ public class TalentProduct extends BaseTimeEntity {
     private String beforeStatusMessage;
 
     private LocalDateTime approvalDate;
+
+    @OneToMany(mappedBy = "talentProduct")
+    private List<TalentProductImage> talentProductImages = new ArrayList<>();
 
     @OneToOne(mappedBy = "talentProduct")
     private TalentProductReviewTotal talentProductReviewTotal;
@@ -77,13 +77,12 @@ public class TalentProduct extends BaseTimeEntity {
     private List<Chatroom> chatrooms = new ArrayList<>();
 
     @Builder
-    public TalentProduct(Long id, User user, String title, Category category, String serviceInformation, String images, Long price, String type) {
+    public TalentProduct(Long id, User user, String title, Category category, String serviceInformation, Long price, String type) {
         this.id = id;
         this.user = user;
         this.title = title;
         this.category = category;
         this.serviceInformation = serviceInformation;
-        this.images = images;
         this.price = price;
         this.type = type;
     }
@@ -102,7 +101,6 @@ public class TalentProduct extends BaseTimeEntity {
         this.title = talentProductUpdateDto.getTitle();
         this.category = Category.builder().id(talentProductUpdateDto.getCategoryId()).build();
         this.serviceInformation = talentProductUpdateDto.getServiceInformation();
-        this.images = talentProductUpdateDto.getImages();
         this.price = talentProductUpdateDto.getPrice();
         this.status = "비승인";
         this.beforeStatusMessage = this.statusMessage;

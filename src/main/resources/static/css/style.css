@@ -135,6 +135,10 @@ footer .global-footer-container:nth-child(2) div {
   clear: both;
 }
 
+.visibility-hidden {
+  visibility: hidden;
+}
+
 .global-search-container {
   width: 1200px;
   margin: auto;
@@ -162,7 +166,7 @@ footer .global-footer-container:nth-child(2) div {
 .global-search-container .right-side {
   width: 88%;
 }
-.global-search-container .right-side div {
+.global-search-container .right-side .category .category-item {
   display: inline-block;
   margin-right: 30px;
   font-size: 16px;
@@ -174,13 +178,12 @@ footer .global-footer-container:nth-child(2) div {
   text-align: center;
   color: #696969;
 }
-.global-search-container .right-side div:hover {
+.global-search-container .right-side .category .category-item:hover {
   cursor: pointer;
-  font-weight: bold;
-  color: #000000;
+  text-shadow: -0.06ex 0 #000000, 0.06ex 0 #000000;
 }
-.global-search-container .right-side #search-choice {
-  font-weight: bold;
+.global-search-container .right-side .category .category-choice {
+  text-shadow: -0.06ex 0 #000000, 0.06ex 0 #000000;
   color: #000000;
 }
 .global-search-container .right-side select {
@@ -391,7 +394,7 @@ footer .global-footer-container:nth-child(2) div {
   width: 85%;
   margin: 10px 0;
 }
-.sell-post-container .sell-post-file-container #main-image {
+.sell-post-container .sell-post-file-container #first-image {
   width: 500px;
   height: 450px;
   border: 1px solid;
@@ -400,8 +403,12 @@ footer .global-footer-container:nth-child(2) div {
   border-radius: 5px;
   border: 1px solid #dcdcdc;
   position: relative;
+  overflow: hidden;
+  background-size: 100% 100%;
 }
-.sell-post-container .sell-post-file-container #main-image .fa-plus-circle {
+.sell-post-container .sell-post-file-container #first-image .fa-plus-circle {
+  width: 100%;
+  max-width: 100%;
   font-size: 95px;
   margin: auto;
   padding: 177px 0;
@@ -410,14 +417,28 @@ footer .global-footer-container:nth-child(2) div {
   display: block;
   opacity: 0.8;
   transition: 0.7s;
+  display: inline-block;
 }
-.sell-post-container .sell-post-file-container #main-image .fa-plus-circle:hover {
+.sell-post-container .sell-post-file-container #first-image .fa-plus-circle:hover {
   color: #3c3c3c;
   transform: scale(1.1);
   cursor: pointer;
 }
+.sell-post-container .sell-post-file-container #first-image .fa-times-circle {
+  font-size: 50px;
+  color: #eaeaea;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 10px;
+  z-index: 2;
+}
+.sell-post-container .sell-post-file-container #first-image .fa-times-circle:hover {
+  color: #3c3c3c;
+  cursor: pointer;
+}
 .sell-post-container .sell-post-file-container .sub-image {
-  float: right;
+  float: left;
   width: 240px;
   height: 215px;
   display: inline-block;
@@ -426,6 +447,8 @@ footer .global-footer-container:nth-child(2) div {
   border-radius: 5px;
   border: 1px solid #dcdcdc;
   position: relative;
+  overflow: hidden;
+  background-size: 100% 100%;
 }
 .sell-post-container .sell-post-file-container .sub-image .fa-plus-circle {
   font-size: 95px;
@@ -442,13 +465,39 @@ footer .global-footer-container:nth-child(2) div {
   transform: scale(1.1);
   cursor: pointer;
 }
-.sell-post-container #price {
+.sell-post-container .sell-post-file-container .sub-image .fa-times-circle {
+  font-size: 30px;
+  color: #eaeaea;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 5px;
+  z-index: 2;
+}
+.sell-post-container .sell-post-file-container .sub-image .fa-times-circle:hover {
+  color: #3c3c3c;
+  cursor: pointer;
+}
+.sell-post-container .price-wrapper {
   width: 85%;
+  position: relative;
+}
+.sell-post-container .price-wrapper #price {
+  width: 100%;
   box-sizing: border-box;
   height: 40px;
   border-radius: 5px;
   border: 1px solid #dcdcdc;
-  padding: 0 19px;
+  color: #000000;
+  font-size: 15px;
+  padding: 0 30px;
+  text-align: right;
+}
+.sell-post-container .price-wrapper #price-unit {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  color: #6b6b6b;
 }
 .sell-post-container #notice {
   width: 100%;
@@ -504,7 +553,7 @@ footer .global-footer-container:nth-child(2) div {
 .sell-list-container .page-category h1 .home-circle {
   padding: 0 0 8px 0;
 }
-.sell-list-container .page-category .amount {
+.sell-list-container .page-category #amount {
   display: inline-block;
   font-family: NotoSansCJKkr;
   font-size: 12px;
@@ -516,7 +565,7 @@ footer .global-footer-container:nth-child(2) div {
   text-align: right;
   color: #969696;
 }
-.sell-list-container #view-option {
+.sell-list-container #sort-option {
   width: 1200px;
   margin: auto;
   display: flex;
@@ -528,7 +577,7 @@ footer .global-footer-container:nth-child(2) div {
   width: 70%;
   margin-top: 55px;
 }
-.sell-list-container #view-option div {
+.sell-list-container #sort-option div {
   margin: 0 0 0 30px;
   font-family: NotoSansCJKkr;
   font-size: 14px;
@@ -540,12 +589,12 @@ footer .global-footer-container:nth-child(2) div {
   text-align: right;
   color: #969696;
 }
-.sell-list-container #view-option div:hover {
+.sell-list-container #sort-option div:hover {
   cursor: pointer;
   font-weight: bold;
   color: black;
 }
-.sell-list-container #view-option #option-choice {
+.sell-list-container #sort-option .sort-choice {
   font-weight: bold !important;
   color: #3c3c3c !important;
 }
@@ -554,6 +603,7 @@ footer .global-footer-container:nth-child(2) div {
   width: 280px;
   height: 312px;
   margin-bottom: 27px;
+  margin-right: 20px;
 }
 .sell-list-container .sell-list-content:hover {
   cursor: pointer;

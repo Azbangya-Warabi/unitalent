@@ -45,10 +45,6 @@ public class TalentProductDetailResponseDto {
                 .build()
                 .toConvert();
         this.serviceInformation = entity.getServiceInformation();
-        this.images = new ImageDto(ImageSeparator.builder()
-                .images(entity.getImages())
-                .build()
-                .toList());
         this.price = entity.getPrice();
         this.type = entity.getType();
 

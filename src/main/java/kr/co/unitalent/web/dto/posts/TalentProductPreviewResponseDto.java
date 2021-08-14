@@ -16,7 +16,6 @@ import java.util.List;
 public class TalentProductPreviewResponseDto {
     private Long productId;
     private String title;
-    private String image;
     private Long price;
 
     private Long reviewCount;
@@ -25,7 +24,6 @@ public class TalentProductPreviewResponseDto {
     public TalentProductPreviewResponseDto(TalentProduct entity) {
         this.productId = entity.getId();
         this.title = entity.getTitle();
-        this.image = ImageSeparator.builder().images(entity.getImages()).build().toList().get(0);
         this.price = entity.getPrice();
         this.reviewCount = entity.getTalentProductReviewTotal().getReviewCount();
         this.averageStarScore = entity.getTalentProductReviewTotal().getAverageStarScore();

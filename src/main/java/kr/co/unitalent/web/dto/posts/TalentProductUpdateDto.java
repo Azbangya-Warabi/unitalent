@@ -1,9 +1,9 @@
 package kr.co.unitalent.web.dto.posts;
 
-import kr.co.unitalent.domain.global.Category;
 import lombok.*;
 
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Getter
@@ -11,21 +11,21 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 public class TalentProductUpdateDto {
     @Size(min = 1, max = 30)
-    @NonNull
+    @NotNull
     private String title;
 
-    @NonNull
+    @NotNull
     private String  categoryId;
 
     @Size(min = 1, max = 3000)
-    @NonNull
+    @NotNull
     private String serviceInformation;
 
     @Size(min = 1, max = 3000)
     private String images;
 
     @Min(0)
-    @NonNull
+    @NotNull
     private Long price;
 
     @Builder

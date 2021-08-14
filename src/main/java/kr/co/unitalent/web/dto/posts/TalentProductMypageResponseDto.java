@@ -11,7 +11,6 @@ import lombok.ToString;
 public class TalentProductMypageResponseDto {
     private Long productId;
     private String title;
-    private String images;
     private Long price;
     private String type;
     private String status;
@@ -20,7 +19,6 @@ public class TalentProductMypageResponseDto {
     public TalentProductMypageResponseDto(TalentProduct entity) {
         this.productId = entity.getId();
         this.title = entity.getTitle();
-        this.images = entity.getImages();
         this.price = entity.getPrice();
         this.type = entity.getType();
         this.status = entity.getStatus();
